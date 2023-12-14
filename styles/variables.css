@@ -1,3 +1,13 @@
+:root {
+  --main-color: #FF0070;
+  --bg-img: url(../images/cover-image-dark.png);
+  --text-color: #F1B2CE;
+  --title-color: #FF0070;
+  --subtitle-color: #000028;
+  --header-title-color: #DB00FF;
+  --link-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.4);
+}
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
