@@ -61,20 +61,8 @@
   border: 1px solid var(--title-color);
 }
 
-.header::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-image: url(../images/Ellipse.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 0px 4px var(--main-color));
-}
-
 .decorated-zone::before {
-  content:"";
+  content: "";
   position: absolute;
   right: 0;
   top: 0;
@@ -85,7 +73,7 @@
 }
 
 .decorated-zone::after {
-  content:"";
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -107,12 +95,24 @@
   font-weight: 400;
   line-height: 25px; /* 138.889% */
 }
+/*Замечание теперь понятно:-Селектор нужно удалить - текст должен располагаться внутри тега в html файле-, 
+я могу сделать как комментируете вы, но в задании звучит фраза:-Это декоративный элемент, который скрывается в светлой теме. 
+Пожалуй, это единственный пустой тег в нашей разметке и единственный элемент,
+к которому уместно применить абсолютное позиционирование. Кого в итоге мне слушать?*/
 
 .decor__item::before {
-  content: "REC";
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: -22px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #FF0070;
+  filter: drop-shadow(0px 0px 4px var(--main-color));
 }
 
-.header__theme-menu{
+.header__theme-menu {
   align-self: center;
 }
 
@@ -124,13 +124,12 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
-  line-height: 82.5%; /* 95.7px */ 
+  line-height: 82.5%; /* 95.7px */
 }
 
 .title {
   align-self: center;
 }
-
 
 .title_decor {
   background-color: var(--main-color);
@@ -195,7 +194,7 @@
   display: grid;
   gap: 10px;
   margin-block-start: 10px;
-  margin-block-end: 40px;
+  margin-block-end: 50px;
   grid-template-columns: minmax(355px, 1fr);
   grid-template-rows: repeat(5, min-content);
 }
@@ -211,7 +210,7 @@
   position: relative;
   display: grid;
   min-inline-size: 100%;
-  min-block-size: 668px; 
+  min-block-size: 648px;
 }
 
 .footer__title {
@@ -220,7 +219,7 @@
   color: var(--header-title-color);
   text-shadow: 4px 4px 0px var(--main-color);
   font-family: IBM Plex Mono, sans-serif;
-  font-size: clamp(7.25rem, 6.3477rem + 3.8498vw, 9.8125rem);;
+  font-size: clamp(7.25rem, 6.3477rem + 3.8498vw, 9.8125rem);
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%; /* 95.7px */
@@ -255,7 +254,7 @@
     justify-items: end;
     min-inline-size: 100%;
     min-block-size: 984px;
-    margin-block-end: 50px;
+    margin-block-end: 80px;
   }
 
   .title {
@@ -279,7 +278,7 @@
     grid-template-rows: repeat(2, min-content);
   }
 
-  .pr_dof {
+  .card_first-pr_dof {
     grid-row: 2/3;
     grid-column: 2/3;
   }
@@ -315,7 +314,9 @@
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
     margin-block-start: 20px;
+    margin-block-end: 80px;
   }
 
   .image_mountain {
@@ -338,7 +339,11 @@
   }
 
   .footer {
-    min-block-size: 984px; 
+    min-block-size: 984px;
+  }
+
+  .footer__title {
+    font-size: 120px;
   }
 }
 
